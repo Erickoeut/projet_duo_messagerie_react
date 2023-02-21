@@ -1,32 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Header from './container/Header.jsx'
+import Categorie from './components/categories/categorie.jsx'
+import { useState } from 'react';
+import Login from './components/login/login';
 function App() {
 
   const [login, setLogin] = useState('');
 
-  const onLog = (login) => {
+  const onLog = (user) => {
     console.log('onlog');
-    setLogin(login)
-    console.log(login);
+    setLogin(user)
+  }
+
+  const onChoseCateg=(categ)=>{
+    console.log('onChoseCateg');
   }
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      {!login&&<Login onLog={onLog}/>}
+      {login&&<Categorie user={login} onChoseCateg={onChoseCateg}/>}
     </div>
   );
 }

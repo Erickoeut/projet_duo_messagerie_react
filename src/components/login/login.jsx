@@ -10,8 +10,7 @@ const Login = ({onLog}) => {
         e.preventDefault();
 
         
-        return onLog(user)
-       
+        return onLog(user)   
     
     }
     
