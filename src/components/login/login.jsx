@@ -9,11 +9,11 @@ const Login = ({onLog}) => {
     const handleSubmit = (e) => {
         e.preventDefault();  
         return onLog(user)   
-    
     }
- 
+
     return (
             <>
+                <h2>Login</h2>
                 <div className={style.center}>
                     <form onSubmit={handleSubmit} className={style.form}>     
                         <input type="text" name="login" id="login" value={user} onChange={(e)=> setUser(e.target.value)} required className={style.border}/>
