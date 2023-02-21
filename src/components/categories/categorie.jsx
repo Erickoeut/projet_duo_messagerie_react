@@ -1,40 +1,23 @@
-import { useState } from 'react'
 import style from './categorie.module.css'
 
-export default function Categorie({ user,onChoseCateg }) {
-    const [categ, setCateg] = useState('')
-    const handleSelect = () => {
-        return onChoseCateg(categ)
-    }
+
+export default function Categorie({ user,onReturnToLog,listCateg,onReturnId }) {
+
+
     return (
         <div className={style.component}>
-            <p>bienvenue {user}</p>
-            <div>
-                <div onClick={handleSelect} className={style.categorie}>
-                    <div>
-                        <h2>Categorie 3</h2>
-                        <p>nb message</p>
-                    </div>
-                    <p>Dernier commit</p>
-                </div>
+            <div className={style.entete}>
+                <p>bienvenue {user}</p>
+                <button onClick={onReturnToLog}>Retour</button>
             </div>
-            <div>
-                <div onClick={handleSelect} className={style.categorie}>
+            <div className={style.listeCateg}>
+                {listCateg.map((cat) => <div key={'cat' + cat.id} className={style.categorie} onClick={()=>onReturnId(cat.id)}>
                     <div>
-                        <h2>Categorie 3</h2>
-                        <p>nb message</p>
+                        <h2>{cat.name}</h2>
+                        <p>{cat.count} message{cat.count > 1 && 's'}</p>
                     </div>
-                    <p>Dernier commit</p>
-                </div>
-            </div>
-            <div>
-                <div onClick={handleSelect} className={style.categorie}>
-                    <div>
-                        <h2>Categorie 3</h2>
-                        <p>nb message</p>
-                    </div>
-                    <p>Dernier commit</p>
-                </div>
+                    <p>Dernier commit : {new Date(cat.lastUpdate * 1000).toLocaleString()}</p>
+                </div>)}
             </div>
         </div>
     )
