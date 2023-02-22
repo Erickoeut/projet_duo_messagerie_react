@@ -3,14 +3,11 @@ import style from "./login.module.css"
 
 
 const Login = ({onLog}) => {
-
     const [user, setUser] = useState('');
-
     const handleSubmit = (e) => {
         e.preventDefault();  
         return onLog(user)   
     }
-
     return (
             <>
                 <h2>Login</h2>
