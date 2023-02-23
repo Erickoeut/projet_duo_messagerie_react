@@ -21,7 +21,7 @@
 }
 
 .categorie:hover{
-    background-color: lightcoral;
+    background-color: lightgreen;
 }
 
 .categorie>div{
@@ -40,6 +40,6 @@ img {
 
 .text {
     background: linear-gradient(to right, #42d392 10%, #647eff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
 }
