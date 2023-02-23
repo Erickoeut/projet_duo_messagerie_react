@@ -13,7 +13,7 @@ export default function Message({ user, onReturnToCat, messages, onNewMsg,curren
 
     return (
         <div className={style.component}>
-            <h2>Messages dans la catégorie {currentCat.name}</h2>
+            <h2 className={style.text}>Messages dans la catégorie {currentCat.name}</h2>
             <div className={style.entete}>
                 <p>bienvenue {user} </p>
                 <button onClick={() => onReturnToCat()}>Retour</button>
@@ -25,7 +25,7 @@ export default function Message({ user, onReturnToCat, messages, onNewMsg,curren
             </div>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="">Entrez un nouveau message</label>
-                <textarea value={newMsg} onChange={(e) => setNewMsg(e.target.value)} />
+                <textarea value={newMsg} onChange={(e) => setNewMsg(e.target.value)} className={style.textarea} />
                 <button type="submit">Enregistrer</button>
             </form>
         </div>)

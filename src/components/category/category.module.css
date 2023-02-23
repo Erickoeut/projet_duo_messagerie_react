@@ -1,5 +1,5 @@
 .entete{
-    width: 80vw;
+    width: 70vw;
     margin: auto;
     display: flex;
     align-items: center;
@@ -16,13 +16,30 @@
     width: 70vw;
     border: 3px double lightskyblue;
     margin: 1rem;
-    
     padding: 1rem;
+    background-color: lightcyan;
 }
+
+.categorie:hover{
+    background-color: lightcoral;
+}
+
 .categorie>div{
     display: flex;
     justify-content: space-between;
 }
 button{
     margin: 1rem;
+}
+
+img {
+    max-height: 10vh;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.text {
+    background: linear-gradient(to right, #42d392 10%, #647eff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

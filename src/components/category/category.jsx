@@ -5,7 +5,7 @@ export default function Category({ user,listCat,onReturnId,onReturnToLog }) {
 // a refactorer => on peut sortir la map ainsi que chaque bouton dans un sous composant (j'ai la flemme la, ça marche bien comme ça pour le moment)
     return (
         <div className={style.component}>
-            <h2>Liste des catégories</h2>
+            <h2 className={style.text}>Liste des catégories</h2>
             <div className={style.entete}>
                 <p>bienvenue {user}</p>
                 <button onClick={onReturnToLog}>Retour</button>

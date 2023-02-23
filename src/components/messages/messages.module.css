@@ -5,7 +5,7 @@
 }
 
 .entete{
-    width: 80vw;
+    width: 70vw;
     margin: auto;
     display: flex;
     align-items: center;
@@ -13,10 +13,11 @@
 }
 
 .message{
-    width: 80vw;
-    border: 1px solid; 
+    width: 70vw;
+    border: 3px double lightskyblue;
     margin: 1rem;
     padding: 1rem;
+    background-color: lightcyan;
 }
 form{
     display:flex;
@@ -25,6 +26,22 @@ form{
     width: 80vw;
 }
 textarea{
-    width: 100%;
+    width: 70vw;
     height: 10vh;
+}
+
+.text {
+    background: linear-gradient(to right, #42d392 10%, #647eff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.textarea {
+    background-color: lightcoral;
+    border: 3px double lightskyblue;
+}
+
+.textarea:hover {
+    background-color: lightgreen;
+    border: 3px double red;
 }
