@@ -13,7 +13,7 @@ export default function Category({ user,listCat,onReturnId,onReturnToLog }) {
             <div>
                 {listCat.map((cat) => <div key={'cat' + cat.id} className={style.categorie} onClick={()=>onReturnId(cat)}>
                     <div>
-                        <h3>{cat.name}</h3>
+                        <h3>{cat.name}</h3><img src={'http://localhost:8080/'+cat.icon} alt='icone catégorie'/>
                         <p>{cat.count} message{cat.count > 1 && 's'}</p>
                     </div>
                     <p>Dernier commit : {new Date(cat.lastUpdate * 1000).toLocaleString()}</p>
