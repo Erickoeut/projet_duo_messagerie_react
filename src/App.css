@@ -5,5 +5,26 @@
 
     max-width: 80vw;
     margin: 0 auto;
-    border: 1px solid red;
+    border: 10px double lightskyblue;
+    border-radius: 20px;
+    
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(white, white), 
+                      conic-gradient(from var(--angle), red, yellow,yellow, lime,lime, aqua,aqua, blue,blue, magenta,magenta, red);
+    background-origin: border-box;
+    background-clip: content-box, padding-box, border-box;
+
+	animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }

@@ -1,0 +1,38 @@
+.background {
+    background-color: grey;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 10px 10px 0px 0px;
+    --angle: 0deg;
+	border: 2px solid transparent;
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(white, white), 
+                      conic-gradient(from var(--angle), red, yellow,yellow, lime,lime, aqua,aqua, blue,blue, magenta,magenta, red);
+    background-origin: border-box;
+    background-clip: content-box, padding-box, border-box;
+
+	animation: 5s rotate linear infinite;
+
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient( 135deg, #42d392, #647eff ) */
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.text {
+    background: linear-gradient(to right, #42d392 0%, #647eff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* background: linear-gradient( 135deg, #42d392, #647eff ) */
+}

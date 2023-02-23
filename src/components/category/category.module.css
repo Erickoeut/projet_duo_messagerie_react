@@ -13,9 +13,10 @@
 }
 
 .categorie{
-    width: 80vw;
-    border: 1px solid; 
+    width: 70vw;
+    border: 3px double lightskyblue;
     margin: 1rem;
+    
     padding: 1rem;
 }
 .categorie>div{

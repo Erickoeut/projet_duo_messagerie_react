@@ -10,8 +10,9 @@ const Login = ({onLog}) => {
     }
     return (
             <>
-                <h2>Login</h2>
-                <div className={style.center}>
+              
+                <div className={style.div}>
+                      <h2 className={style.center}><span className={style.text}>Login</span></h2>
                     <form onSubmit={handleSubmit} className={style.form}>     
                         <input type="text" name="login" id="login" value={user} onChange={(e)=> setUser(e.target.value)} required className={style.border}/>
                         <button type="submit" className={style.border}>Login</button>
